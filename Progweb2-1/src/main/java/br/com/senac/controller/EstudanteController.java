@@ -26,4 +26,19 @@ public class EstudanteController {
 	public ResponseEntity<List <Estudante>> buscarTodosEstudantes(){
 		return estudanteService.buscarTodosEstudantes();
 	}
+	@PostMapping
+	public ResponseEntity<Estudante> cadastrarEstudante(@RequestBody Estudante estudante) {
+
+		return estudanteService.cadastrarEstudante(estudante);
+	}
+	
+	@PutMapping
+	public ResponseEntity<Estudante> atualizarEstudante(@RequestBody Estudante estudante){
+		return estudanteService.atualizarEStudante(estudante);
+	}
+	
+	@DeleteMapping("/{Id}")
+	public ResponseEntity <String> removerEstudante(@PathVariable Long Id){
+		return estudanteService.removerUsuario(Id);
+	}
 }
