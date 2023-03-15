@@ -26,7 +26,7 @@ public class EstudanteService {
 	}
 
 	public ResponseEntity<List <Estudante>> buscarTodosEstudantes(){
-		List ListaEstudante = new ArrayList <Estudante>(ListaEstudantes.values());
+		List <Estudante> ListaEstudante = new ArrayList <Estudante>(ListaEstudantes.values());
 	
 		if (ListaEstudante.isEmpty()) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
